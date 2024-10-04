@@ -8,6 +8,7 @@ const { courseRouter } = require("./routes/course");
 const { adminRouter } = require("./routes/admin");
 
 const app = express();
+app.use(express.json());
 
 // Good Practice: storing spefic version like routes help you to build new features in next version without effecting the current version
 app.use("/api/v1/admin", adminRouter);
